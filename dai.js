@@ -2,7 +2,7 @@ var id = 'VPython';
 var project = window.location.hash.replace(/^#/,'');
 
 const dai = function (profile) {
-    csmapi.set_endpoint (window.location.origin);
+    csmapi.set_endpoint ("https://demo.iottalk.tw");
 
     var odf_func = {};
     var idf_func = {};
@@ -86,7 +86,7 @@ var audio = {}
 
 const preloadAudio = function(filename) {
   if (audio[filename] == undefined) {
-    audio[filename] = new Audio('/da/vp/audio/' + filename);
+    audio[filename] = new Audio('https://demo.iottalk.tw/da/vp/audio/' + filename);
   }
 };
 
@@ -129,7 +129,7 @@ window.__context = {
 var originHash;
 $(function () {
   originHash = window.location.hash;
-  fetch_code('/da/vp/py/'+ project + '.py');
+  fetch_code('b123.py/'+ project + '.py');
 });
 
 $(window).on('hashchange', function (a) {
